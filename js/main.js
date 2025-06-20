@@ -1046,9 +1046,13 @@ function switchArea(areaID) {
 
 // Check if you can afford the cost
 function canAfford(cost, name, amount) {
+    // console.log("cost:",cost);
+    // console.log("name:",name);
+    // console.log("amount:",amount);
     // For every material in the cost
     for (let mat of cost) {
         // If you don't have enough of the resource: Return false
+        // console.log("resources mat 0", player.resources[mat[0]]);
         if (player.resources[mat[0]].amount < mat[1] || player.resources[mat[0]].amount === 0) {
             return false;
         }
