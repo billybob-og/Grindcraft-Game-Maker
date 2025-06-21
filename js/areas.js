@@ -45,6 +45,27 @@ addResources({                                          // Function for adding a
     "wood house": {
      image:  "images/wooden house.webp",
     },
+    "raw iron": {
+image: "images/raw iron.png",
+    },
+"stone pickaxe": {
+image: "images/stone pickaxe.png",
+    },
+
+"wooden axe": {
+image: "images/wooden axe.png",
+},
+"furnace": {
+image: "images/furnace.jpg",
+},
+"coal": {
+image: "images/caol.png",
+},
+"iron ingot": {
+    image: "images/iron.jpg",
+},
+
+
 
 });
 
@@ -72,7 +93,13 @@ addArea("c",                                            // Function for adding a
                     {
                         id: "dirt",
                         time: [["", 0.6]],
-                        probability: 50,
+                        probability: 25,
+                    },
+                    {
+                        id: "oak log",
+                        time: [["stone axe", 0.5], ["wooden axe", 0.8]],
+                        probability: 25,
+
                     },
 
                 ]
@@ -88,9 +115,20 @@ addArea("c",                                            // Function for adding a
                     [
                         {
                             id: "cobble stone",
-                            time: [["", 0.5]],
-                            probability: 100,
+                            time: [["stone pickaxe", 0.5], ["wooden pickaxe", 0.8]],
+                            probability: 25,
                         },
+                        {
+                            id: "raw iron",
+                            time: [["stone pickaxe", 0.8]],
+                            probability: 25,
+                        },
+                        {
+                            id: "coal",
+                            time: [["stone pickaxe", 0.6]],
+                            probability: 50,
+                        },
+                    
                     ]
             },
 
@@ -101,11 +139,7 @@ addArea("c",                                            // Function for adding a
                 background: "images/grinds/forest.png",
                 resources:
                     [
-                        {
-                            id: "oak log",
-                            time: [["", 0.5]],
-                            probability: 100,
-                        },
+                        
 
                     ]
             },
@@ -136,6 +170,18 @@ addArea("c",                                            // Function for adding a
                 desc: "can be used to make logs",
                 type: "display",
                 cost: [["oak log", 0]],
+            },
+            {
+                name: "raw iron",
+                Desc: "smelt into iron",
+                type: "display",
+                cost: [["raw iron", 0]],
+            },
+            {
+                name: "coal",
+                desc: "used to a furnace",
+                type: "display",
+                cost: [["coal", 0]],
             },
             {
                 name: "planks",
@@ -173,17 +219,21 @@ addArea("c",                                            // Function for adding a
             },
             {
                 name: "dirt hut",
-                desc: "a dirt hut",
+                desc: "autamates surface",
                 type: "craft",
                 cost: [["dirt", 23], ["crafting table", 1], ["door", 1]],
 
             },
             {
                 name: "cobblestone hut",
-                desc: "a hut made from cobblestone",
+                desc: "autamates mine",
                 type: "craft",
                 cost: [["cobble stone", 30], ["crafting table", 1], ["door", 1]],
-                message: "You have beaten the game!(so fare)",
+            },
+            {
+                name: "wooden axe",
+                type: "craft",
+                cost: [["stick", 2], ["planks", 3], ["crafting table", 0]],
             },
             {
                 name: "stone axe",
@@ -195,8 +245,32 @@ addArea("c",                                            // Function for adding a
             {
                 name: "wood house",
                 type: "craft",
+                desc: "autamates forest",
                 cost: [["planks", 31], ["door", 1], ["oak log", 16], ["crafting table", 1]],
+                message: "You have beaten the game!(so fare)",
             },
+            {
+                name: "stone pickaxe",
+                type: "craft",
+                cost: [["stick", 2], ["cobble stone", 3], ["crafting table", 0]],
+            },
+            {
+                name: "furnace",
+                type: "craft",
+                desc: "used to smelt oars and cook food",
+                cost: [["cobble stone", 8], ["crafting table", 0]],
+            },
+            {
+                name: "iron ingot",
+                type: "craft",
+                desc: "used to make better tools",
+                amount: 3,
+                cost: [["raw iron", 3], ["coal", 2], ["furnace", 0]],
+            },
+
+
+
+
 
 
         ],
