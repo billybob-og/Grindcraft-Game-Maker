@@ -43,29 +43,36 @@ addResources({                                          // Function for adding a
         image: "images/oak log.png",
     },
     "wood house": {
-     image:  "images/wooden house.webp",
+        image: "images/wooden house.webp",
     },
     "raw iron": {
-image: "images/raw iron.png",
+        image: "images/raw iron.png",
     },
-"stone pickaxe": {
-image: "images/stone pickaxe.png",
+    "stone pickaxe": {
+        image: "images/stone pickaxe.png",
     },
 
-"wooden axe": {
-image: "images/wooden axe.png",
-},
-"furnace": {
-image: "images/furnace.jpg",
-},
-"coal": {
-image: "images/caol.png",
-},
-"iron ingot": {
-    image: "images/iron.jpg",
-},
-
-
+    "wooden axe": {
+        image: "images/wooden axe.png",
+    },
+    "furnace": {
+        image: "images/furnace.jpg",
+    },
+    "coal": {
+        image: "images/caol.png",
+    },
+    "iron ingot": {
+        image: "images/iron.jpg",
+    },
+    "wooden sword": {
+        image: "images/wooden sword.png",
+    },
+    "beef": {
+image: "images/beef.png",
+    },
+    "steak": {
+image: "images/steak.png",
+    },
 
 });
 
@@ -101,6 +108,7 @@ addArea("c",                                            // Function for adding a
                         probability: 25,
 
                     },
+                    
 
                 ]
 
@@ -128,7 +136,7 @@ addArea("c",                                            // Function for adding a
                             time: [["stone pickaxe", 0.6]],
                             probability: 50,
                         },
-                    
+
                     ]
             },
 
@@ -139,7 +147,37 @@ addArea("c",                                            // Function for adding a
                 background: "images/grinds/forest.png",
                 resources:
                     [
-                        
+                        {
+                            id: "beef",
+                            time: [["", 0.8]],
+                            probability: 20,
+                        },
+                        {
+                            id: "oak log",
+                            time: [["stone axe", 0.5]],
+                            probability: 75,
+                        },
+                        {
+                            id: "stick",
+                            time: [["", 0.1]],
+                            probability: 5,
+                        },
+
+
+                    ]
+            },
+            {
+                name: "animals",
+                unlocked: false,
+                auto: ["wood house"],
+                background: "images/grinds/animals.png",
+                resources:
+                    [
+                       {
+                        id: "beef",
+                        time: [["wooden sword", 0.6]],
+                        probability: 100,   
+                       },
 
                     ]
             },
@@ -182,6 +220,12 @@ addArea("c",                                            // Function for adding a
                 desc: "used to a furnace",
                 type: "display",
                 cost: [["coal", 0]],
+            },
+            {
+            name: "beef",
+            desc: "food",
+            type: "display",
+            cost: [["beef", 0]],
             },
             {
                 name: "planks",
@@ -266,6 +310,20 @@ addArea("c",                                            // Function for adding a
                 desc: "used to make better tools",
                 amount: 3,
                 cost: [["raw iron", 3], ["coal", 2], ["furnace", 0]],
+            },
+            {
+                name: "wooden sword",
+                desc: "unlocks animals",
+                type: "craft",
+                cost: [["stick", 1], ["planks", 2], ["crafting table", 0]],
+                unlockGrinds: "animals",
+            },
+            {
+                name: "steak",
+                desc: "requierd to get villagers",
+                type: "craft",
+                cost: [["beef", 2], ["coal", 4], ["furnace", 0]],
+                amount: 2,
             },
 
 
