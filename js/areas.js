@@ -154,7 +154,7 @@ addArea("c",                                            // Function for adding a
                     [
                         {
                             id: "beef",
-                            time: [["", 0.8]],
+                            time: [["wooden sword", 0.4],["", 0.8]],
                             probability: 20,
                         },
                         {
