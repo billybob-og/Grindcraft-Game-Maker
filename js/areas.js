@@ -73,6 +73,11 @@ image: "images/beef.png",
     "steak": {
 image: "images/steak.png",
     },
+"iron pickaxe": {
+image: "images/iron pickaxe.png",
+},
+
+
 
 });
 
@@ -95,12 +100,12 @@ addArea("c",                                            // Function for adding a
                     {
                         id: "stick",
                         time: [["", 0.5]],
-                        probability: 50,
+                        probability: 35,
                     },
                     {
                         id: "dirt",
                         time: [["", 0.6]],
-                        probability: 25,
+                        probability: 40,
                     },
                     {
                         id: "oak log",
@@ -123,7 +128,7 @@ addArea("c",                                            // Function for adding a
                     [
                         {
                             id: "cobble stone",
-                            time: [["stone pickaxe", 0.5], ["wooden pickaxe", 0.8]],
+                            time: [["iron pickaxe", 0.2], ["stone pickaxe", 0.5], ["wooden pickaxe", 0.8]],
                             probability: 40,
                         },
                         {
@@ -325,7 +330,12 @@ addArea("c",                                            // Function for adding a
                 cost: [["beef", 2], ["coal", 4], ["furnace", 0]],
                 amount: 2,
             },
-
+            {
+                name: "steak",
+                desc: "used to mine faster",
+                type: "craft",
+                cost: [["stick", 2], ["iron", 3]],
+            },
 
 
 
