@@ -277,7 +277,7 @@ addArea("c",                                            // Function for adding a
                 name: "cobblestone hut",
                 desc: "autamates mine",
                 type: "craft",
-                cost: [["cobble stone", 30], ["crafting table", 1], ["door", 1]],
+                cost: [["cobble stone", 26], ["crafting table", 1], ["door", 1]],
             },
             {
                 name: "wooden axe",
