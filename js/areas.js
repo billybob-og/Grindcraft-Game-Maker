@@ -133,12 +133,12 @@ addArea("c",                                            // Function for adding a
                         },
                         {
                             id: "raw iron",
-                            time: [["stone pickaxe", 0.8]],
+                            time: [["iron pickaxe", 0.5], ["stone pickaxe", 0.8]],
                             probability: 25,
                         },
                         {
                             id: "coal",
-                            time: [["stone pickaxe", 0.6]],
+                            time: [["iron pickaxe", 0.3],["stone pickaxe", 0.6]],
                             probability: 35,
                         },
 
