@@ -334,7 +334,7 @@ addArea("c",                                            // Function for adding a
                 name: "iron pickaxe",
                 desc: "used to mine faster",
                 type: "craft",
-                cost: [["stick", 2], ["iron", 3]],
+                cost: [["stick", 2], ["iron ingot", 3], ["crafting table", 0]],
             },
 
 
