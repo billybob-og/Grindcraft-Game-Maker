@@ -124,7 +124,7 @@ addArea("c",                                            // Function for adding a
                         {
                             id: "cobble stone",
                             time: [["stone pickaxe", 0.5], ["wooden pickaxe", 0.8]],
-                            probability: 25,
+                            probability: 40,
                         },
                         {
                             id: "raw iron",
@@ -134,7 +134,7 @@ addArea("c",                                            // Function for adding a
                         {
                             id: "coal",
                             time: [["stone pickaxe", 0.6]],
-                            probability: 50,
+                            probability: 35,
                         },
 
                     ]
