@@ -331,7 +331,7 @@ addArea("c",                                            // Function for adding a
                 amount: 2,
             },
             {
-                name: "steak",
+                name: "iron pickaxe",
                 desc: "used to mine faster",
                 type: "craft",
                 cost: [["stick", 2], ["iron", 3]],
