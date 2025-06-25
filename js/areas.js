@@ -76,7 +76,12 @@ image: "images/steak.png",
 "iron pickaxe": {
 image: "images/iron pickaxe.png",
 },
-
+"diamond": {
+image: "images/diamond.png",
+},
+"villager": {
+image: "images/villager.jpg",
+},
 
 
 });
@@ -129,7 +134,7 @@ addArea("c",                                            // Function for adding a
                         {
                             id: "cobble stone",
                             time: [["iron pickaxe", 0.2], ["stone pickaxe", 0.5], ["wooden pickaxe", 0.8]],
-                            probability: 40,
+                            probability: 35,
                         },
                         {
                             id: "raw iron",
@@ -140,6 +145,11 @@ addArea("c",                                            // Function for adding a
                             id: "coal",
                             time: [["iron pickaxe", 0.3],["stone pickaxe", 0.6]],
                             probability: 35,
+                        },
+                        {
+                            id: "diamond",
+                            time: [["iron pickaxe", 0.8]],
+                            probability: 5,
                         },
 
                     ]
@@ -231,6 +241,12 @@ addArea("c",                                            // Function for adding a
             desc: "food",
             type: "display",
             cost: [["beef", 0]],
+            },
+            {
+                name: "diamond",
+                desc: "used to get a daimond pickaxe",
+                type: "display",
+                cost: [["diamond", 0]],
             },
             {
                 name: "planks",
@@ -336,6 +352,13 @@ addArea("c",                                            // Function for adding a
                 type: "craft",
                 cost: [["stick", 2], ["iron ingot", 3], ["crafting table", 0]],
             },
+            {
+                name: "villager",
+                desc: "used to autamate grinds",
+                type: "craft",
+                cost: [["dirt hut", 1], ["steak", 3], ["iron ingot", 2]], 
+            },
+
 
 
 
