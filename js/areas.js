@@ -1,9 +1,9 @@
 // Game Info
 setGameInfo({
-    name: "My Grindcraft Game",                         // The name of your game!
-    version: "0.1",                                     // The current version of your game!
+    name: "BobTheBlob's grindcraft",                         // The name of your game!
+    version: "1.0",                                     // The current version of your game!
     icon: "images/system/blank.png",                    // Link or path to an icon image for your game!
-    ID: "myGrindcraftGame",                             // Your game's ID! Should be unique for every game!
+    ID: "BobTheBlob's grindcraft",                             // Your game's ID! Should be unique for every game!
 });
 
 // Resources
@@ -82,18 +82,29 @@ image: "images/diamond.png",
 "villager": {
 image: "images/villager.jpg",
 },
-
+"stone sword": {
+image: "images/stonesword.jpg"
+},
+"iron axe": {
+image: "images/ironaxe.jpg"
+},
+"iron sword": {
+image: "images/ironsword.jpg"
+},
+"BOB": {
+image: "images/villager2.jpg"
+},
 
 });
 
 // Areas
 
-addArea("c",                                            // Function for adding areas to your game
+addArea("1",                                            // Function for adding areas to your game
     {
         name: "City State",
         image: "images/areas/cityState.png",
         unlocked: true,
-        updateWhileUnactive: true,
+        updateWhileUnactive: false,
 
         grinds: [
             {
@@ -114,7 +125,7 @@ addArea("c",                                            // Function for adding a
                     },
                     {
                         id: "oak log",
-                        time: [["stone axe", 0.5], ["wooden axe", 0.8]],
+                        time: [["iron axe", 0.1], ["stone axe", 0.5], ["wooden axe", 0.8]],
                         probability: 25,
 
                     },
@@ -143,7 +154,7 @@ addArea("c",                                            // Function for adding a
                         },
                         {
                             id: "coal",
-                            time: [["iron pickaxe", 0.3],["stone pickaxe", 0.6]],
+                            time: [["iron pickaxe", 0.3], ["stone pickaxe", 0.6]],
                             probability: 35,
                         },
                         {
@@ -164,12 +175,12 @@ addArea("c",                                            // Function for adding a
                     [
                         {
                             id: "beef",
-                            time: [["wooden sword", 0.4],["", 0.8]],
+                            time: [["iron sword", 0.02],["stone sword", 0.08], ["wooden sword", 0.4], ["", 0.8]],
                             probability: 20,
                         },
                         {
                             id: "oak log",
-                            time: [["stone axe", 0.5]],
+                            time: [["iron axe", 0.1], ["stone axe", 0.5]],
                             probability: 75,
                         },
                         {
@@ -190,9 +201,10 @@ addArea("c",                                            // Function for adding a
                     [
                        {
                         id: "beef",
-                        time: [["wooden sword", 0.6]],
+                        time: [["iron sword", 0.04], ["stone sword", 0.2], ["wooden sword", 0.6]],
                         probability: 100,   
                        },
+
 
                     ]
             },
@@ -232,7 +244,7 @@ addArea("c",                                            // Function for adding a
             },
             {
                 name: "coal",
-                desc: "used to a furnace",
+                desc: "used in a furnace",
                 type: "display",
                 cost: [["coal", 0]],
             },
@@ -312,7 +324,6 @@ addArea("c",                                            // Function for adding a
                 type: "craft",
                 desc: "autamates forest",
                 cost: [["planks", 31], ["door", 1], ["oak log", 16], ["crafting table", 1]],
-                message: "You have beaten the game!(so fare)",
             },
             {
                 name: "stone pickaxe",
@@ -354,9 +365,34 @@ addArea("c",                                            // Function for adding a
             },
             {
                 name: "villager",
-                desc: "used to autamate grinds",
+                desc: "used to obtain BOB",
                 type: "craft",
                 cost: [["dirt hut", 1], ["steak", 3], ["iron ingot", 2]], 
+            },
+            {
+                name: "stone sword",
+                desc: "a stone sword",
+                type: "craft",
+                cost: [["crafting table", 0], ["cobble stone", 2], ["stick", 1]]
+            },
+            {
+                name: "iron axe",
+                desc: "An iron axe",
+                type: "craft",
+                cost: [["crafting table", 0], ["iron ingot", 3], ["stick", 2]]
+            },
+            {
+                name: "iron sword",
+                desc: "an iron sword",
+                type: "craft",
+                cost: [["crafting table", 0], ["stick", 1], ["iron ingot", 2]]
+            },
+            {
+                name: "BOB",
+                desc: "BOB, the ultamate goal",
+                type: "craft",
+                cost: [["iron sword", 1], ["iron pickaxe", 1], ["iron axe", 1], ["crafting table", 1], ["furnace", 1], ["villager", 2], ["steak", 20], ["wood house", 1], ["diamond", 30], ["cobblestone hut", 1], ["dirt hut", 1]],
+                message: "You have unlocked BOB, a powerfull god, you can now enter the mines",
             },
 
 
@@ -371,6 +407,58 @@ addArea("c",                                            // Function for adding a
         },
     }
 );
+
+// addArea("2",                                            // Function for adding areas to your game
+//     {
+//         name: "The Mines",
+//         image: "images/grinds/cobblestone.png",
+//         unlocked: false,
+//         updateWhileUnactive: false,
+    
+//         grinds:[
+
+//             {
+//                 name: "mineshaft",
+//                 unlocked: true,
+//                 background: "grinds/cobblestone.png",
+//                 resources:
+//                 [
+//                     {
+//                         id: "cobble stone",
+//                         time: [["", 1]],
+//                         probability: 75,
+//                     },
+//                     {
+//                         id: "planks",
+//                         time: [["", 1]],
+//                         probability: 25,
+//                     },
+//                 ]
+//             },
+//         ],
+//         crafts: [
+// {
+//                 name: "furnace",
+//                 type: "craft",
+//                 desc: "used to smelt oars and cook food",
+//                 cost: [["cobble stone", 8], ["crafting table", 0]],
+// },
+// {
+//                 name: "crafting table",
+//                 desc: "Required to build most things",
+//                 type: "craft",
+//                 cost: [["planks", 4]],
+// },
+//         ],
+//    update(diff) {                                      // diff is the time in milliseconds since last time the update function was runned
+
+//         },
+
+//     },
+// ),
+
+
+
 
 // Function that will be runned when the website is loaded
 function onLoad(oldVersion) {
