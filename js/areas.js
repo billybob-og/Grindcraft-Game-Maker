@@ -392,7 +392,7 @@ addArea("1",                                            // Function for adding a
                 desc: "BOB, the ultamate goal",
                 type: "craft",
                 cost: [["iron sword", 1], ["iron pickaxe", 1], ["iron axe", 1], ["crafting table", 1], ["furnace", 1], ["villager", 2], ["steak", 20], ["wood house", 1], ["diamond", 30], ["cobblestone hut", 1], ["dirt hut", 1]],
-                message: "You have unlocked BOB, a powerfull god, you can now enter the mines",
+                message: "You have unlocked BOB, a powerfull god, you can now enter the mine",
             },
 
 
@@ -408,54 +408,55 @@ addArea("1",                                            // Function for adding a
     }
 );
 
-// addArea("2",                                            // Function for adding areas to your game
-//     {
-//         name: "The Mines",
-//         image: "images/grinds/cobblestone.png",
-//         unlocked: false,
-//         updateWhileUnactive: false,
+addArea("2",                                            // Function for adding areas to your game
+    {
+        name: "The Mines",
+        image: "images/grinds/cobblestone.png",
+        unlocked: false,
+        updateWhileUnactive: false,
     
-//         grinds:[
+        grinds: [
 
-//             {
-//                 name: "mineshaft",
-//                 unlocked: true,
-//                 background: "grinds/cobblestone.png",
-//                 resources:
-//                 [
-//                     {
-//                         id: "cobble stone",
-//                         time: [["", 1]],
-//                         probability: 75,
-//                     },
-//                     {
-//                         id: "planks",
-//                         time: [["", 1]],
-//                         probability: 25,
-//                     },
-//                 ]
-//             },
-//         ],
-//         crafts: [
-// {
-//                 name: "furnace",
-//                 type: "craft",
-//                 desc: "used to smelt oars and cook food",
-//                 cost: [["cobble stone", 8], ["crafting table", 0]],
-// },
-// {
-//                 name: "crafting table",
-//                 desc: "Required to build most things",
-//                 type: "craft",
-//                 cost: [["planks", 4]],
-// },
-//         ],
-//    update(diff) {                                      // diff is the time in milliseconds since last time the update function was runned
+            {
+                name: "mineshaft",
+                unlocked: true,
+                background: "grinds/cobblestone.png",
+                resources:
+                [
+                    {
+                        id: "cobble stone",
+                        time: [["", 1]],
+                        probability: 75,
+                    },
+                    {
+                        id: "planks",
+                        time: [["", 1]],
+                        probability: 25,
+                    },
+                ]
+            },
+        ],
+       
+        crafts: [
+{
+                name: "furnace",
+                type: "craft",
+                desc: "used to smelt oars and cook food",
+                cost: [["cobble stone", 8], ["crafting table", 0]],
+},
+{
+                name: "crafting table",
+                desc: "Required to build most things",
+                type: "craft",
+                cost: [["planks", 4]],
+},
+        ],
+   update(diff) {                                      // diff is the time in milliseconds since last time the update function was runned
 
-//         },
+        },
 
-//     },
-// ),
+    },
+),
 
 
 
